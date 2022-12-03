@@ -24,7 +24,7 @@
         Console.WriteLine($"Число {numberSecond} не кратно {numberFirst}" + $"\nОстаток равен: {function}"); // Решение студентки
     }
 }
-Example_12();
+//Example_12();
 
 void Example_14()
 {
@@ -56,7 +56,7 @@ void Example_14()
         Console.WriteLine("НЕ кратно");
     }
 }
-Example_14();
+//Example_14();
 
 void Example_16()
 {

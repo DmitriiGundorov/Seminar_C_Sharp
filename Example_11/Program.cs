@@ -14,7 +14,7 @@ void Example_11()
     //Console.WriteLine(ones);
     Console.WriteLine($"Новое число: {hundreds}{ones}");
 }
-//Example_11();
+Example_11();
 
 // Решение преподавателя
 void Example_11_2()
