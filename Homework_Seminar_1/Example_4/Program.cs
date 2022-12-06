@@ -7,7 +7,7 @@ int numberTwo = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите третье число: ");
 int numberThree = Convert.ToInt32(Console.ReadLine());
-int numberMax = numberFirst;
+/* int numberMax = numberFirst;
 
 if (numberTwo > numberMax)
 {
@@ -17,4 +17,12 @@ if (numberThree > numberMax)
 {
     numberMax = numberThree;
 }
-Console.WriteLine("Наибольшее число: " + numberMax);
+Console.WriteLine("Наибольшее число: " + numberMax); */
+
+// Решение преподавателя
+int MaxNumber(int numberFirst, int numberTwo)
+{
+    if (numberFirst>numberTwo) return numberFirst;
+    else return numberTwo;
+}
+Console.WriteLine("Наибольшее число: " + MaxNumber(numberFirst, MaxNumber(numberTwo, numberThree)));

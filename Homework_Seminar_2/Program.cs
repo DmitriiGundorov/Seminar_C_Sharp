@@ -10,7 +10,7 @@
     }
     else
     {
-        int num = number % 100 / 10;
+        int num = number / 10 % 10;
         Console.WriteLine($"Вторая цифра введенного числа: {num}");
     }
 }
@@ -22,18 +22,20 @@ void Example_13()
     Console.WriteLine("|     Задача 13       |");
     Console.Write("Введите целое число более или равно 100: ");
     int number = Convert.ToInt32(Console.ReadLine());
-    int count = number;
     if (number < 100)
     {
         Console.WriteLine("Введено некорректное число. Третьей цифры нет.");
     }
     else
     {
-        while (count >= 1000)
+        while (number >= 1000)
         {
-            count = count / 10;
+            number = number / 10;
         }
-        Console.WriteLine(count % 10);
+        Console.WriteLine($"Третья цифра введенного числа: " + number % 10);
+
+        // Решение преподавателя
+        //Console.WriteLine(Convert.ToString(number)[2]); // Неправильное решение через строку, медленнее раз в 7. Если работа ведется с числами, то на выходе без преобразований можно получить число
     }
 }
 //Example_13();
@@ -42,7 +44,7 @@ void Example_15()
 {
     // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
     Console.WriteLine("|     Задача 15       |");
-    Console.Write("Введите цифру дня недели: ");
+    /*Console.Write("Введите цифру дня недели: ");
     int number = Convert.ToInt32(Console.ReadLine());
     if (number < 1 || number > 7)
     {
@@ -75,6 +77,16 @@ void Example_15()
     else if (number == 7)
     {
         Console.WriteLine("Воскресенье \nУра! Выходной!");
-    }
+    }*/
+
+    // Решение преподавателя
+    Random rand = new Random();
+    int day = rand.Next(1, 8);
+    string[] week = { "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" };
+    Console.WriteLine(day);
+    Console.WriteLine(week[day-1]);
+    if (day > 0 && day < 6) Console.WriteLine("Будний день");
+    else if (day > 5 && day < 8) Console.WriteLine("Выходной день");
+    else Console.WriteLine("Некорректный ввод");
 }
 Example_15();

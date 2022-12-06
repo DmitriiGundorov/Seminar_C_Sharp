@@ -85,4 +85,35 @@ void Example_21()
     Distanse = Math.Round(Distanse, 2);// Округление числа до 2-го знака после запятой
     Console.WriteLine($"Расстояние между точкой А и В (Длина отрезка АВ): {Distanse}");
 }
-Example_21();
+//Example_21();
+
+// Объяснение предодавателя по парсингу (грамматическому разбору слова или текста) строки
+void Zadacha_21()
+{
+    Console.WriteLine("Введите координаты точки А через пробел:");
+    string pointA = Console.ReadLine();
+    Console.WriteLine("Введите координаты точки B через пробел:");
+    string pointB = Console.ReadLine();
+
+    string[] pointASplit = pointA.Split();
+    string[] pointBSplit = pointB.Split();
+
+    double distanse = Math.Sqrt(Math.Pow(Convert.ToInt32(pointASplit[0]) - Convert.ToInt32(pointBSplit[0]), 2)
+                         + Math.Pow(Convert.ToInt32(pointASplit[1]) - Convert.ToInt32(pointBSplit[1]), 2));
+    Console.WriteLine(Math.Round(distanse, 2));
+
+
+}
+//Zadacha_21();
+
+// Задача 22. Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел от 1 до N.
+
+void Example_22()
+{
+    Console.WriteLine("Задача 22");
+    Console.Write("Введите любое целое число N: ");
+    int N = Convert.ToInt32(Console.ReadLine());
+
+    for (int i = 1; i<= N; i++) Console.WriteLine($"{i} * {i} = {Math.Pow(i, 2)}");
+}
+Example_22();
