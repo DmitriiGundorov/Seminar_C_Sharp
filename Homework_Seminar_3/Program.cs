@@ -5,18 +5,42 @@ void Example_19()
 {
     Console.WriteLine("|    Задача 19     |");
     Console.WriteLine("Введите пятизначное целое число или текст: ");
-    string number = Console.ReadLine();
-    //if (number[5] >= 0) Console.WriteLine("Некорректный ввод"); // Комментарий: не удается придумать как сделать чтобы программа не ломалась
-    if (number[4] == number[0])
+    int number = Convert.ToInt32(Console.ReadLine());
+    int copy_number = number;
+    int result = 0;
+    int variable = 0;
+    //Мое паршивое решение
+    /*string number = Console.ReadLine();
+    if (number[5] >= 0) Console.WriteLine("Некорректный ввод"); // Комментарий: не удается придумать как сделать чтобы программа не ломалась
+    else if (number[4] == number[0])
     {
         if (number[3] == number[1]) Console.WriteLine($"Значение {number} является полиндромом");
     }
     else
     {
         Console.WriteLine($"Значение {number} НЕ является полиндромом");
+    }*/
+    if (number >= 10000 & number < 100000)
+    {
+        while (copy_number > 0)
+        {
+            variable = copy_number % 10;
+            result = result * 10 + variable;
+            copy_number /= 10;
+        }
+        if (result == number)
+        {
+            Console.WriteLine($"{number} = {result}");
+            Console.WriteLine($"Число {number} палиндром");
+        }
+        else
+        {
+            Console.WriteLine($"{number} <> {result}");
+            Console.WriteLine($"Число {number} НЕ палиндром");
+        }
     }
+    else Console.WriteLine("Некорректный ввод");
 }
-
 
 // Задача 21: Напишите программу, которая принимает на вход координаты
 // двух точек и находит расстояние между ними в 3D пространстве.
