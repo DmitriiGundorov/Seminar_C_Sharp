@@ -1,18 +1,4 @@
-﻿// Задача 31: Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9].
-// Найдите сумму отрицательных и положительных элементов массива.
-
-void Example_31()
-{
-    Console.WriteLine("|    Задача 31     |");
-    int size = 12;
-    //string[] - строковый массив, bool[] - логический массив, int[] - целочисленный массив
-    int[] numbers = new int[size];
-    FillArray(numbers, -9, 9);
-    PrintArray(numbers);
-    FindSumPositive(numbers);
-    FindSumNegative(numbers);
-}
-void FindSumPositive(int[] nums)
+﻿void FindSumPositive(int[] nums)
 {
     int sumPos = 0;
     int length = nums.Length;
@@ -55,7 +41,20 @@ void PrintArray(int[] nums)
     Console.WriteLine();
 }
 
-//Example_31();
+// Задача 31: Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9].
+// Найдите сумму отрицательных и положительных элементов массива.
+
+void Example_31()
+{
+    Console.WriteLine("|    Задача 31     |");
+    int size = 12;
+    //string[] - строковый массив, bool[] - логический массив, int[] - целочисленный массив
+    int[] numbers = new int[size];
+    FillArray(numbers, -9, 9);
+    PrintArray(numbers);
+    FindSumPositive(numbers);
+    FindSumNegative(numbers);
+}
 
 // Задача 32: Напишите программу замены элементов 
 // массива: положительные элементы замените на 
@@ -78,7 +77,6 @@ void Example_32()
     Console.Write("Инверсивный массив:  ");
     PrintArray(numbers);
 }
-//Example_32();
 
 // Задача 33: Задайте массив. Напишите программу, которая 
 // определяет, присутствует ли заданное число в массиве.
@@ -104,7 +102,6 @@ void Example_33()
     if (flag) Console.WriteLine($"Значение {N} имеется в заданном массиве");
     else Console.WriteLine($"Значение {N} отсутствует в заданном массиве");
 }
-//Example_33();
 
 // Задача 35: Задайте одномерный массив из 10 случайных чисел. 
 // Найдите количество элементов массива, значения которых лежат в 
@@ -128,7 +125,6 @@ void Example_35()
     else Console.WriteLine($"Элементов массива, значения которых лежат в отрезке [10,99] нет");
 
 }
-//Example_35();
 
 // Задача 37: Найдите произведение пар чисел в одномерном массиве. 
 // Парой считаем первый и последний элемент, второй и предпоследний 
@@ -153,6 +149,11 @@ void Example_37()
     Console.Write("Новый массив:  ");
     PrintArray(result);
 }
+
+//Example_31();
+//Example_32();
+//Example_33();
+//Example_35();
 Example_37();
 
 
