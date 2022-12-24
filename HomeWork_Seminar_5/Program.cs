@@ -38,7 +38,7 @@ void Example_34()
         if (numbers[i] % 2 == 0) count++;
     }
     Console.WriteLine($"Количество четных чисел в массиве - > {count}");
-}
+   }
 
 // Задача 36: Задайте одномерный массив, заполненный случайными
 // числами. Найдите сумму элементов с нечётными индексами.
@@ -73,23 +73,24 @@ void Example_38()
     double numberMin = 100;
     for (int i = 0; i < size; i++)
     {
-        numbers[i] = rand.Next(1000, 10000) / delitel;
+        // numbers[i] = rand.Next(1000, 10000) / delitel;
+        numbers[i] = Math.Round(rand.NextDouble() * 20 - 10, 2); //[0,1]*20 -> [0,20] - 10 -> [-10,10]
     }
     Console.WriteLine("   Заданный массив:");
-    for (int i = 0; i < size; i++)
-    {
-        Console.Write(numbers[i] + "  ");
-    }
-    Console.WriteLine();
-    //double numberMin = numbers[0];
-    for (int i = 0; i < size; i++)
-    {
-        if (numbers[i] > numberMax) numberMax = numbers[i];
-        if (numbers[i] <= numberMin) numberMin = numbers[i];
-    }
-    Console.WriteLine("Минимальное значение массива:  " + numberMin);
-    Console.WriteLine("Максимальное значение массива:  " + numberMax);
-    Console.WriteLine($"Разница между минимальным и максимальным значением массива - > {numberMax - numberMin}");
+        for (int i = 0; i < size; i++)
+        {
+            Console.Write(numbers[i] + "  ");
+        }
+        Console.WriteLine();
+        //double numberMin = numbers[0];
+        for (int i = 0; i < size; i++)
+        {
+            if (numbers[i] > numberMax) numberMax = numbers[i];
+            if (numbers[i] <= numberMin) numberMin = numbers[i];
+        }
+        Console.WriteLine("Минимальное значение массива:  " + numberMin);
+        Console.WriteLine("Максимальное значение массива:  " + numberMax);
+        Console.WriteLine($"Разница между минимальным и максимальным значением массива - > {numberMax - numberMin}");
 }
 
 Example_34();

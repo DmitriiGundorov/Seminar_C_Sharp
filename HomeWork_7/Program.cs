@@ -1,16 +1,38 @@
 ﻿// Методы
 
-void FillArray(double[,] numbers, int minValue = 0, int maxValue = 9)
+void FillArrayDouble(double[,] numbers, int minValue, int maxValue)
 {
     maxValue++;
     Random rand = new Random();
-    int size = numbers.Length();
-    for (int i = 0; i < size; i++)
+    int rows = numbers.GetLength(0);
+    int columns = numbers.GetLength(1);
+    for (int i = 0; i < rows; i++)
     {
-        double value = rand.NextDouble() * 20 - 10;
-        numbers[i] = Math.Round(value, 2);
+        double valuei = rand.NextDouble() * 20 - 10;
+        numbers[i] = Math.Round(valuei, 2);
+        for (int j = 0; j < columns; j++)
+        {
+            double valuej = rand.NextDouble() * 20 - 10;
+            numbers[j] = Math.Round(valuej, 2);
         }
+    }
 }
+
+void FillArray(int[,] numbers, int minValue = 0, int maxValue = 9)
+{
+    maxValue++;
+    Random rand = new Random();
+    int rows = numbers.GetLength(0);
+    int columns = numbers.GetLength(1);
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            numbers[i, j] = rand.Next(minValue, maxValue);
+        }
+    }
+}
+
 
 void PrintArray(double[,] numbers)
 {
@@ -37,7 +59,7 @@ void Example_47()
     Console.Write("Введите количество столбцов двумерного массива: ");
     int columns = Convert.ToInt32(Console.ReadLine());
     double[,] numbers = new double[rows, columns];
-    FillArray(numbers);
+    FillArrayDouble(numbers);
     PrintArray(numbers);
 }
 
