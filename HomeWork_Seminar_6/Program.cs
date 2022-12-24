@@ -11,9 +11,30 @@ void Example_41()
     for (int i = 1; i <= size; i++)
     {
         int temp = Convert.ToInt32(Console.ReadLine());
-        if (temp < 0) count++;
+        if (temp > 0) count++;
     }
-    Console.WriteLine("Количество чисел меньше 0 -> " + count);
+    Console.WriteLine("Количество чисел больше 0 -> " + count);
+}
+
+// Метод введения текста
+string Input (string inputText)
+{
+    Console.Write(inputText);
+    return Console.RedLine();
+}
+
+void Example_41_m()
+{
+    Console.WriteLine("|    Задача 41     |");
+    int size = Convert.ToInt32(Input("Введите количество чисел M:  "));
+    int count = 0;
+    Console.WriteLine($"Введите {size} числа(ел): ");
+    for (int i = 1; i <= size; i++)
+    {
+        int temp = Convert.ToInt32(Console.ReadLine());
+        if (temp > 0) count++;
+    }
+    Console.WriteLine("Количество чисел больше 0 -> " + count);
 }
 
 // Задача 43. Напишите программу, которая найдёт точку пересечения
@@ -39,5 +60,6 @@ void Example_43()
         Console.WriteLine($"Координата точки пересечения 2-х прямых линний -> ({x}, {y})");
     }
 }
-Example_41();
-Example_43();
+//Example_41();
+Example_41_m();
+//Example_43();
