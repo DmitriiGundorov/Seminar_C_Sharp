@@ -20,7 +20,7 @@ void Example_41()
 string Input (string inputText)
 {
     Console.Write(inputText);
-    return Console.RedLine();
+    return Console.ReadLine();
 }
 
 void Example_41_m()
@@ -31,7 +31,7 @@ void Example_41_m()
     Console.WriteLine($"Введите {size} числа(ел): ");
     for (int i = 1; i <= size; i++)
     {
-        int temp = Convert.ToInt32(Console.ReadLine());
+        int temp = Convert.ToInt32(Input($"Введите {i}-ое число:  "));
         if (temp > 0) count++;
     }
     Console.WriteLine("Количество чисел больше 0 -> " + count);
@@ -52,7 +52,7 @@ void Example_43()
     double b2 = Convert.ToInt32(Console.ReadLine());
     Console.Write("Введите значение k2: ");
     double k2 = Convert.ToInt32(Console.ReadLine());
-    if (k1 == k2) Console.WriteLine("Некорректный ввод. Деление на 0.");
+    if (k1 == k2) Console.WriteLine("Некорректный ввод. Деление на 0 (прямые параллельны).");
     else
     {
         double x = (b2 - b1) / (k1 - k2);
