@@ -16,7 +16,7 @@ void Example_41()
     Console.WriteLine("Количество чисел больше 0 -> " + count);
 }
 
-// Метод введения текста
+// Метод ввода текста
 string Input (string inputText)
 {
     Console.Write(inputText);

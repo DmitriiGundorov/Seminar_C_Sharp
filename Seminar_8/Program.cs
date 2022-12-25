@@ -155,6 +155,7 @@ void Example_57()
     }
     PrintDictionary(dictionary, "Вывод словаря");
 }
+
 void PrintDictionary(int[] numbers, string message = "Вывод двумерного массива:")
 {
     int rows = numbers.Length;
@@ -166,6 +167,6 @@ void PrintDictionary(int[] numbers, string message = "Вывод двумерн�
     }
 }
 
-//Example_53();
-//Example_55();
+Example_53();
+Example_55();
 Example_57();
