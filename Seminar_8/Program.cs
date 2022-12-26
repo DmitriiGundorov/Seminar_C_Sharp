@@ -28,6 +28,7 @@ static void FillArrayDouble(double[,] numbers, int minValue = -9, int maxValue =
         }
     }
 }
+
 #endregion FillArray
 
 #region PrintArray
@@ -70,6 +71,7 @@ static void PrintArrayDouble(double[,] numbers, string message = "Вывод д�
         Console.WriteLine();
     }
 }
+
 #endregion PrintArray
 
 string Input(string inputText)
